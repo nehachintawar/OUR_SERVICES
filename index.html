@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e40efcfb88.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    rotate: {
+                        '360' : '360deg',
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="assignment" class="relative w-[95vw] flex justify-center items-center m-10 bg-black relative bg-center bg-cover"
+        style="background-image: url('./images/background.JPG');">
+
+        <div class="w-[95vw] h-[60vh] flex-col flex items-center justify-between m-10">
+
+            <div class="w-full ">
+                <h1 class="text-white text-5xl font-bold">OUR SERVICES</h1>
+            </div>
+            <div id="services" class="w-full flex flex-row gap-[3rem] items-center justify-center">
+                <div id="first_service"
+                    class="card w-[22%] h-[20rem] bg-white shadow-md shadow-gray-700 flex flex-col items-center justify-evenly p-5 rounded-md relative">
+
+                    <img src="./images/alert.jpg" alt="alert"
+                        class="w-[5rem] h-[5rem] border-[0.2rem] border-solid border-blue-950 rounded-full absolute top-[-2rem]">
+                    <h2 class="text-2xl text-center mt-[3px] font-bold">Emergency Plumbing Services</h2>
+                    <p class="text-center">Our plumbers are ready to go 24/7 for emergncies - including nights, weekends
+                        and holiday.</p>
+                    <div id="Explore" class="text-blue-500 font-bold text-center">EXPLORE THIS SERVICE <i
+                            class="fa-solid fa-angle-right"></i>
+                    </div>
+
+                </div>
+
+                <div id="second_service"
+                    class="card w-[22%] h-[20rem] bg-white shadow-md shadow-gray-700 flex flex-col items-center justify-evenly p-5 rounded-md relative">
+                    <img src="./images/plumbing and drains.jpg" alt=""
+                        class="w-[5rem] h-[5rem] border-[0.2rem] border-solid border-blue-950 rounded-full absolute top-[-2rem]">
+                    <h2 class="text-2xl text-center mt-[3px] font-bold">Plumbing and Drains</h2>
+                    <p class="text-center">As the largest plumbing and drain service company, we make thousands of
+                        repairs every day.
+                    </p>
+                    <div id="Explore" class="text-blue-500 font-bold text-center">EXPLORE THIS SERVICE <i
+                            class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+
+                <div id="third_service toggleRotation"
+                    class="card w-[22%] h-[20rem] bg-white shadow-md shadow-gray-700 flex flex-col items-center justify-evenly p-5 rounded-md relative">
+                    <img src="./images/water.jpg" alt=""
+                        class="w-[5rem] h-[5rem] border-[0.2rem] border-solid border-blue-950 rounded-full absolute top-[-2rem]">
+                    <h2 class="text-2xl text-center mt-[3px] font-bold">Water Damage</h2>
+                    <p class="text-center">Our teams are equipped with state-of-the-art extraction and cleanup
+                        equipment.</p>
+                    <div id="id" class="text-blue-500 font-bold text-center">EXPLORE THIS SERVICE <i
+                            class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+
+                <div id="fourth_service"
+                    class="card w-[22%] h-[20rem] bg-white shadow-md shadow-gray-700 flex flex-col items-center justify-evenly p-5 rounded-md relative">
+                    <img src="images/water_heater.jpg" alt="water heater"
+                        class="w-[5rem] h-[5rem] border-[0.2rem] border-solid border-blue-950 rounded-full absolute top-[-2rem]">
+                    <h2 class="text-2xl text-center mt-[3px] font-bold">Water Heaters</h2>
+                    <p class="text-center">Trust Roto-Rooter for repair and replacement of gas, electric and tankless
+                        water heaters.</p>
+                    <div id="Explore" class="text-blue-500 font-bold text-center">EXPLORE THIS SERVICE <i
+                            class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                card.style.cssText = `transition: transform 0.8s ease;
+                                  transform-style: preserve-3d;
+                                  transform: rotate(360deg);`;
+            });
+
+            card.addEventListener("mouseleave", () => {
+                card.style.cssText = `transition: transform 0.8s ease;
+                                  transform-style: preserve-3d;
+                                  transform: rotate(0deg);`;
+                                });
+        })
+
+
+    </script>
+</body>
+
+</html>
